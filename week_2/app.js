@@ -23,7 +23,7 @@
       quantity: "5"
     }
   ];
-
+sss
   angular.module('myFirstApp',[])
 
   .controller('myFirstController',naam)

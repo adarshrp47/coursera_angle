@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="factoryApp">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="factory_app.js"></script>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <title>Angle</title>
+  </head>
+  <body>
+    <h1>Trying Factory</h1>
+    <div ng-controller="ShoppingListController1 as list1">
+      <h2>Shopping List 1</h2><br>
+      <input type="text" ng-model="list1.name" placeholder="Enter Item Name">
+      <input type="text" ng-model="list1.quantity" placeholder="Enter Quantity of Item">
+      <button type="button" ng-model="list1.addItem();">Add Items</button>
+      <ol>
+        <li ng-repeat="item in list1.items">
+          {{ item.quantity }} of {{ item.name }}
+          <button ng-click="list1.removeItem($index);">Remove Item</button>
+        </li>
+      </ol>
+      <div class="error">Error: {{list1.errorMessage}}</div>
+    </div>
+    <div ng-controller="ShoppingListController2 as list2">
+      <h2>Shopping List 2</h2>
+      <input type="text" ng-model="list2.name" placeholder="Enter Item Name">
+      <input type="text" ng-model="list2.quantity" placeholder="Enter Quantity of Item">
+      <button type="button" ng-model="list2.addItem();">Add Items</button>
+      <ol>
+        <li ng-repeat="item in list2.items">
+          {{ item.quantity }} of {{ item.name }}
+          <button ng-click="list2.removeItem($index);">Remove Item</button>
+        </li>
+      </ol>
+      <div class="error">Error: {{list2.errorMessage}}</div>
+    </div>
+  </body>
+</html>
