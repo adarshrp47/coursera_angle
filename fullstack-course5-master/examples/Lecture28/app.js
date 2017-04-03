@@ -7,7 +7,6 @@ angular.module('ShoppingListDirectiveApp', [])
 .factory('ShoppingListFactory', ShoppingListFactory)
 .directive('shoppingList', ShoppingList);
 
-
 function ShoppingList() {
   var ddo = {
     templateUrl: 'shoppingList.html',
@@ -19,7 +18,6 @@ function ShoppingList() {
 
   return ddo;
 }
-
 
 // LIST #1 - controller
 ShoppingListController1.$inject = ['ShoppingListFactory'];
